@@ -39,3 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Grouping App Router
 
 A [route group](https://nextjs.org/docs/app/building-your-application/routing/route-groups) can be created by wrapping a folder's name in parenthesis: (folderName)
+
+## Layouts
+
+A [layout](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#layouts) is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested.
