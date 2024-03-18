@@ -43,3 +43,6 @@ A [route group](https://nextjs.org/docs/app/building-your-application/routing/ro
 ## Layouts
 
 A [layout](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#layouts) is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested.
+
+## Style
+All comman CSS are added in the `globals.css` file
