@@ -21,27 +21,17 @@ const SinglePostPage = async ({ params }) => {
   // const blogPost = await getBlogData(slug);
 
   // FETCH DATA WITHOUT API
-  const blogPost = await getPost();
+  const blogPost = await getPost(slug);
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <Image
-          src="https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=800"
-          alt=""
-          fill
-          className={styles.img}
-        />
-      </div>
+      {blogPost.img && (
+        <div className={styles.imgContainer}>
+          <Image src={blogPost.img} fill className={styles.img} />
+        </div>
+      )}
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>{blogPost?.title}</h1>
+        <h1 className={styles.title}>{blogPost.title}</h1>
         <div className={styles.detail}>
-          <Image
-            src="https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt=""
-            width={50}
-            height={50}
-            className={styles.avatar}
-          />
           {blogPost && (
             <Suspense fallback={<div>Loading...</div>}>
               <PostUser userId={blogPost.userId} />
@@ -49,10 +39,12 @@ const SinglePostPage = async ({ params }) => {
           )}
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
-            <span className={styles.detailValue}>19.03.2024</span>
+            <span className={styles.detailValue}>
+              {blogPost.createdAt.toString().slice(4, 16)}
+            </span>
           </div>
         </div>
-        <div className={styles.content}>{blogPost?.body}</div>
+        <div className={styles.content}>{blogPost.desc}</div>
       </div>
     </div>
   );

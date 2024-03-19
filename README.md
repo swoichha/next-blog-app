@@ -52,3 +52,15 @@ For testing purpose I am using [JSONPlaceholder](https://jsonplaceholder.typicod
 
 1. post data: https://jsonplaceholder.typicode.com/posts
 2. user data:  https://jsonplaceholder.typicode.com/users
+
+
+## MongoDB:
+
+1. Create free cluster on MongoDB Atlas
+2. Use following:
+`mongodb+srv://<username>:<password>@cluster0.2ygtffb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+3. Install: `npm install mongodb`
+
+Now install Mongoose
+
+`npm install mongoose@8.0.0   `
