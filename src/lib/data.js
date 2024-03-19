@@ -1,3 +1,7 @@
+import { Post, User } from "./models";
+import { connectToDb } from "./utils";
+import { unstable_noStore as noStore } from "next/cache"
+
 // TEMPORARY DATA
 // const users = [
 //   { id: 1, name: "John" },
@@ -11,8 +15,6 @@
 //   { id: 3, title: "Post 3", body: "......", userId: 2 },
 //   { id: 4, title: "Post 4", body: "......", userId: 2 },
 // ];
-import { Post, User } from "./models";
-import { connectToDb } from "./utils";
 
 export const getPosts = async () => {
     try {
@@ -39,6 +41,7 @@ export const getPost = async(slug) => {
 }
 
 export const getUser = async (id) => {
+    noStore();
     try {
         connectToDb()
         const user = await User.findById(id)
