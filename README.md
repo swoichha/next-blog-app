@@ -46,3 +46,9 @@ A [layout](https://nextjs.org/docs/app/building-your-application/routing/pages-a
 
 ## Style
 All comman CSS are added in the `globals.css` file
+
+## API
+For testing purpose I am using [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+1. post data: https://jsonplaceholder.typicode.com/posts
+2. user data:  https://jsonplaceholder.typicode.com/users
