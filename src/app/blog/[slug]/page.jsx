@@ -15,6 +15,15 @@ import { getPost } from "@/lib/data";
 //   return res.json();
 // };
 
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
+  const blogPost = await getPost(slug);
+
+  return {
+    title: blogPost.title,
+    description: blogPost.desc,
+  };
+};
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
   // FETCH DATA WITH API
