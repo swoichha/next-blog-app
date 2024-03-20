@@ -93,7 +93,7 @@ export const register = async (previousState, formData) => {
   }
 };
 
-export const login = async ( formData) => {
+export const login = async (previousState, formData) => {
   const { username, password } =
     Object.fromEntries(formData);
 
