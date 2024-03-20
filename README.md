@@ -68,6 +68,8 @@ Now install Mongoose
 ## Authentication
 
 Using [Auth.js](https://authjs.dev/reference/nextjs_) to autheticate user.
+For Credentials: https://authjs.dev/getting-started/providers/credentials-tutorial
+For GitHub: https://authjs.dev/getting-started/providers/oauth-tutorial
 
 ### Instalation 
 ```
@@ -75,3 +77,7 @@ npm i npm install next-auth@5.0.0-beta.3
 ```
 
 Then generate random AUTH_SECRET by `openssl rand -base64 32` and add the AUTH_URL
+
+## Password Encryption
+
+Using `npm i bcrypt` we install [bcryt](https://github.com/kelektiv/node.bcrypt.js)  
