@@ -64,3 +64,14 @@ For testing purpose I am using [JSONPlaceholder](https://jsonplaceholder.typicod
 Now install Mongoose
 
 `npm install mongoose@8.0.0   `
+
+## Authentication
+
+Using [Auth.js](https://authjs.dev/reference/nextjs_) to autheticate user.
+
+### Instalation 
+```
+npm i npm install next-auth@5.0.0-beta.3
+```
+
+Then generate random AUTH_SECRET by `openssl rand -base64 32` and add the AUTH_URL

@@ -1,5 +1,18 @@
+import { handleGithubLogin } from "@/lib/action";
+// import { auth } from "@/lib/auth";
+
 const LoginPage = () => {
-  return <div>Login Page</div>;
+  // const session = await auth();
+
+  // console.log(session);
+
+  return (
+    <div>
+      <form action={handleGithubLogin}>
+        <button>Login with Github</button>
+      </form>
+    </div>
+  );
 };
 
 export default LoginPage;
