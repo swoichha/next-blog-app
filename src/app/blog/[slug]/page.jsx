@@ -6,14 +6,14 @@ import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH API
 
-// const getBlogData = async (slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+const getBlogData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong during fetching data through API");
-//   }
-//   return res.json();
-// };
+  if (!res.ok) {
+    throw new Error("Something went wrong during fetching data through API");
+  }
+  return res.json();
+};
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
@@ -27,10 +27,10 @@ export const generateMetadata = async ({ params }) => {
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
   // FETCH DATA WITH API
-  // const blogPost = await getBlogData(slug);
+  const blogPost = await getBlogData(slug);
 
   // FETCH DATA WITHOUT API
-  const blogPost = await getPost(slug);
+  // const blogPost = await getPost(slug);
   return (
     <div className={styles.container}>
       {blogPost.img && (
